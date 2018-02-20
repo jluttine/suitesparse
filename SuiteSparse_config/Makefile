@@ -2,7 +2,7 @@
 # SuiteSparse_config Makefile
 #-------------------------------------------------------------------------------
 
-VERSION = 4.4.5
+VERSION = 4.4.6
 
 default: ccode
 
