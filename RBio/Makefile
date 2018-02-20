@@ -2,7 +2,8 @@
 # RBio Makefile
 #-------------------------------------------------------------------------------
 
-VERSION = 2.2.1
+SUITESPARSE ?= $(realpath $(CURDIR)/..)
+export SUITESPARSE
 
 default: all
 
@@ -48,17 +49,11 @@ valgrind:
 demos:
 	( cd Demo ; $(MAKE) )
 
-
 # install RBio
 install:
-	$(CP) Lib/librbio.a $(INSTALL_LIB)/librbio.$(VERSION).a
-	( cd $(INSTALL_LIB) ; ln -sf librbio.$(VERSION).a librbio.a )
-	$(CP) Include/RBio.h $(INSTALL_INCLUDE)
-	chmod 644 $(INSTALL_LIB)/librbio*.a
-	chmod 644 $(INSTALL_INCLUDE)/RBio.h
+	( cd Lib ; $(MAKE) install )
 
 # uninstall RBio
 uninstall:
-	$(RM) $(INSTALL_LIB)/librbio*.a
-	$(RM) $(INSTALL_INCLUDE)/RBio.h
+	( cd Lib ; $(MAKE) uninstall )
 
