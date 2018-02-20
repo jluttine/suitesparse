@@ -1,6 +1,6 @@
 SuiteSparse:  A Suite of Sparse matrix packages at http://www.suitesparse.com
 
-Dec 8, 2016.  SuiteSparse VERSION 4.5.4
+Mar 30, 2017.  SuiteSparse VERSION 4.5.5
 
 ------------------
 SuiteSparse/README
@@ -214,12 +214,25 @@ need by the applications that use SuiteSparse are copied into
 SuiteSparse/include.   All user documenation is copied into
 SuiteSparse/share/doc.
 
+When compiling the libraries, do NOT use the INSTALL=... options for
+installing. Just do:
+
+    make
+
+or to compile just the libraries without running the demos, do:
+
+    make library
+
 Any program that uses SuiteSparse can thus use a simpler rule as compared to
 earlier versions of SuiteSparse.  If you add /home/myself/SuiteSparse/lib to
 your library search patch, you can do the following (for example):
 
     S = /home/myself/SuiteSparse
     cc myprogram.c -I$(S)/include -lumfpack -lamd -lcholmod -lsuitesparseconfig -lm
+
+Now you can install the libraries, if you wish, in a location other than
+SuiteSparse/lib, SuiteSparse/include, and SuiteSparse/share/doc, using
+'make install INSTALL=...'
 
 Do 'make install' if you want to install the libraries and include files in
 SuiteSparse/lib and SuiteSparse/include, and the documentation in

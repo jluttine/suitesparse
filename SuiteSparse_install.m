@@ -24,6 +24,7 @@ function SuiteSparse_install (do_demo)
 % SPARSEINV      sparse inverse subset; computes entries of inv(sparse(A))
 % MATLAB_Tools   various simple m-files and demos
 % SuiteSparseQR  sparse QR factorization
+% PIRO_BAND      pipelined rotations for SVD of a band matrix
 % spqr_rank      MATLAB toolbox for sparse rank deficient matrices
 %
 % Example:
@@ -260,6 +261,17 @@ catch me
     disp (me.message) ;
     fprintf ('MATLAB_Tools/spok not installed\n') ;
 end
+
+%{
+% compile and install PIRO_BAND
+try
+    paths = add_to_path (paths, [SuiteSparse '/PIRO_BAND/MATLAB']) ;
+    piro_band_make ;
+catch me
+    disp (me.message) ;
+    fprintf ('PIRO_BAND not installed\n') ;
+end
+%}
 
 % compile and install sparsinv
 try

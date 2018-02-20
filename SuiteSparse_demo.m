@@ -187,4 +187,16 @@ catch me
     fprintf ('spqr_rank demo failed\n' )
 end
 
+%{
+if (dopause)
+    input ('Hit enter to run the piro_band demo: ', 's') ;
+end
+try
+    piro_band_demo
+catch me
+    disp (me.message) ;
+    fprintf ('piro_band_demo failed\n' )
+end
+%}
+
 fprintf ('\n\n---- SuiteSparse demos complete\n') ;
