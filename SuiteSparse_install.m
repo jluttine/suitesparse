@@ -12,7 +12,7 @@ function SuiteSparse_install (do_demo)
 % CCOLAMD        constrained COLAMD
 % CSparse        a Concise Sparse matrix package (32-bit or 64-bit, real only)
 % CXSparse       extended version of CSparse (32-bit/64-bit/real/complex)
-% UFget          interface to UF Sparse Matrix Collection (MATLAB 7.0 or later)
+% UFget          interface to SuiteSparse Matrix Collection
 % KLU            sparse LU factorization (left-looking)
 % BTF            permutation to block triangular form (like dmperm)
 % LDL            sparse LDL' factorization
@@ -38,10 +38,11 @@ function SuiteSparse_install (do_demo)
 %
 % This script installs the full-featured CXSparse rather than CSparse.
 %
-% Copyright 1990-2015, Timothy A. Davis, http://www.suitesparse.com.
+% Copyright 1990-2016, Timothy A. Davis, http://www.suitesparse.com.
 % In collaboration with Patrick Amestoy, Yanqing Chen, Iain Duff, John Gilbert,
 % Steve Hadfield, William Hager, Stefan Larimore, Leslie Foster, Eka Palamadai
-% Natarajan, Esmond Ng, Siva Rajamanickam, Nuri Yeralan, and Sanjay Ranka.
+% Natarajan, Esmond Ng, Siva Rajamanickam, Nuri Yeralan, Sanjay Ranka,
+% and Wissam Sid-Lakhdar.
 
 %-------------------------------------------------------------------------------
 % initializations
@@ -316,4 +317,4 @@ function paths = add_to_path (paths, newpath)
 % add a path
 cd (newpath) ;
 addpath (newpath) ;
-paths = [paths { newpath } ] ;						    %#ok
+paths = [paths { newpath } ] ;

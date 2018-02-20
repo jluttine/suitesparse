@@ -197,7 +197,7 @@ try
 
     % no exhaustive tests; tested via other packages
 
-catch                                                                       %#ok
+catch
 
     %---------------------------------------------------------------------------
     % test failure
