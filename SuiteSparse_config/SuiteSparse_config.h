@@ -189,7 +189,7 @@ int SuiteSparse_divcomplex
  *  BTF             version 1.2.1
  *  CAMD            version 2.4.1
  *  CCOLAMD         version 2.9.1
- *  CHOLMOD         version 3.0.3
+ *  CHOLMOD         version 3.0.5
  *  COLAMD          version 2.9.1
  *  CSparse         version 3.1.4
  *  CXSparse        version 3.1.4
@@ -233,11 +233,11 @@ int SuiteSparse_version     /* returns SUITESPARSE_VERSION */
 */
 #define SUITESPARSE_HAS_VERSION_FUNCTION
 
-#define SUITESPARSE_DATE "Jan 7, 2015"
+#define SUITESPARSE_DATE "Jan 19, 2015"
 #define SUITESPARSE_VER_CODE(main,sub) ((main) * 1000 + (sub))
 #define SUITESPARSE_MAIN_VERSION 4
 #define SUITESPARSE_SUB_VERSION 4
-#define SUITESPARSE_SUBSUB_VERSION 2
+#define SUITESPARSE_SUBSUB_VERSION 3
 #define SUITESPARSE_VERSION \
     SUITESPARSE_VER_CODE(SUITESPARSE_MAIN_VERSION,SUITESPARSE_SUB_VERSION)
 
